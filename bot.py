@@ -9,7 +9,10 @@ from pyrogram import Client
 from SilentXForward.forward import start_processor
 from SilentXForward import web_server
 from config import API_ID, API_HASH, BOT_TOKEN, TG_WORKERS, WEB_SERVER, PORT, APP_URL
+from pyrogram import utils as pyroutils
 
+pyroutils.MIN_CHAT_ID = -999999999999
+pyroutils.MIN_CHANNEL_ID = -100999999999999
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
